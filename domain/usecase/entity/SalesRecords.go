@@ -1,6 +1,9 @@
 package entity
 
-import "time"
+import (
+	"VendingMachineTracker/adapter/domain"
+	"time"
+)
 
 //1. 상품명
 //2. 가격
@@ -38,4 +41,20 @@ func (s *SalesRecord) GetCurrency() string {
 
 func (s *SalesRecord) GetCreatedAt() time.Time {
 	return s.CreatedAt
+}
+
+type SearchResponse struct {
+	records []SalesRecord
+}
+
+func NewSearchResponse() *SearchResponse {
+	return &SearchResponse{}
+}
+
+func (s *SearchResponse) GetSearchRecords() []domain.ISalesRecords {
+	res := make([]domain.ISalesRecords,0)
+	for _,v := range s.records {
+		res = append(res,&v)
+	}
+	return res
 }

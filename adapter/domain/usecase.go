@@ -2,6 +2,7 @@ package domain
 
 type UseCase interface{
 	InitRepository()
-	SaveSalesRecord(record interface{}) error
-	ViewRecordData(query interface{}) interface{}
+	SaveSalesRecord(record ISalesRecords) error
+	ViewRecordData(searchFilter Filter) SearchResponse
+	AuthFranchiseAdmin(apikey string) error
 }

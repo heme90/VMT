@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:VMT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="11ef6676-f78f-4f1e-9778-355d97bc9b81" name="Default Changelist" comment="" />
+    <list default="true" id="11ef6676-f78f-4f1e-9778-355d97bc9b81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/adapter/domain/Search.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/document/UML/UML.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/entity/SearchFilter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/domain/record.go" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/domain/record.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/repository/VmtRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/repository/VmtRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/usecase/VMT_usecase.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/usecase/VMT_usecase.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/usecase/entity/SalesRecords.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/usecase/entity/SalesRecords.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,12 +42,19 @@
     </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gAVJGbhpSdeni56LPQKLbjB4kp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -36,15 +70,62 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dbsrl\gowork\src\VendingMachineTracker\domain" />
     </key>
   </component>
+  <component name="RunManager" selected="Shell Script.Unnamed">
+    <configuration name="go test VendingMachineTracker" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
+      <module name="VendingMachineTracker" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="VendingMachineTracker" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="ShConfigurationType" nameIsGenerated="true">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Test.go test VendingMachineTracker" />
+      <item itemvalue="Shell Script.Unnamed" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="shellPath" value="cmd.exe" />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="433" y="0" key="#GOPATH" timestamp="1597557516685">
@@ -55,13 +136,29 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="433" y="174" key="#Go_Modules/0.0.1280.680@0.0.1280.680" timestamp="1597562944357" />
-    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1597559338969">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597565390945">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1597559338969" />
-    <state x="421" y="82" key="FileChooserDialogImpl" timestamp="1597563316090">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1597565390945" />
+    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1598080286293">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597563316090" />
+    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1598080286293" />
+    <state x="460" y="155" key="FileChooserDialogImpl" timestamp="1598072651837">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="460" y="155" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598072651837" />
+    <state x="461" y="242" key="Github.CreateGistDialog" timestamp="1597565556811">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="461" y="242" key="Github.CreateGistDialog/0.0.1280.680@0.0.1280.680" timestamp="1597565556811" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1598072652640">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1598072652640" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1598080118890">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1598080118890" />
   </component>
 </project>

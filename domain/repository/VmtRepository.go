@@ -2,9 +2,11 @@ package repository
 
 import (
 	"VendingMachineTracker/adapter/domain"
+	"VendingMachineTracker/domain/usecase/entity"
 	"errors"
 	"github.com/go-pg/pg"
 	"sync"
+	"time"
 )
 
 var once sync.Once
@@ -49,4 +51,41 @@ func (vr *VmtRepository) SaveSalesRecord(record domain.ISalesRecords) error {
 
 	return nil
 }
+//TODO error 패키지로 정의?
+func (vr *VmtRepository) GetSalesRecords(filter domain.Filter) (domain.SearchResponse,error) {
+	response := entity.NewSearchResponse()
+	q :=vr.conn.Model(interface{}(nil))
+	//TODO pg.Indent.Model ..... Db 구성, 모델 생성 후 쿼리문 수정
+	if filter.GetCountry() != "" {
+		q = q.Where("? = ?")
+	}
+	if filter.GetCity() != "" {
+		q = q.Where("? = ?")
+	}
+	if filter.GetCategory() != 0 {
+		q = q.Where("? = ?")
+	}
+	if filter.GetVendorID() != 0 {
+		q = q.Where("? = ?")
+	}
+	if filter.GetGoodsNameText() != "" {
+		q = q.Where("? = ?")
+	}
+	if filter.GetMinPrice() != 0 {
+		q = q.Where("? = ?")
+	}
+	if filter.GetMaxPrice() != 0 {
+		q = q.Where("? = ?")
+	}
+	if filter.GetStartAt() != time.Date(1,1,1, 0,0,0 ,0,nil)  {
+		q = q.Where("? = ?")
+	}
+	if filter.GetEndAt() != time.Date(1,1,1, 0,0,0 ,0,nil)  {
+		q = q.Where("? = ?")
+	}
+	if err := q.Select(&response);err!=nil {
+		return nil,err
+	}
 
+	return response, nil
+}

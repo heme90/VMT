@@ -20,24 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ef6676-f78f-4f1e-9778-355d97bc9b81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MakeFile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/Franchise_func.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/Record_func.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/Vendor_func.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/genna_shell" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/protocols/VMT.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapter/domain/Vendor.go" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/domain/Vendor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapter/domain/record.go" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/domain/record.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/usecase/VMT_usecase.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/usecase/VMT_usecase.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/usecase/entity/SalesRecords.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/usecase/entity/SalesRecords.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/usecase/entity/Vendor.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/usecase/entity/Vendor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

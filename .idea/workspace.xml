@@ -20,14 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ef6676-f78f-4f1e-9778-355d97bc9b81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adapter/domain/Search.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/document/UML/UML.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/usecase/entity/SearchFilter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MakeFile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Franchise_func.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Record_func.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Vendor_func.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/genna_shell" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protocols/VMT.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/domain/Vendor.go" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/domain/Vendor.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adapter/domain/record.go" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/domain/record.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/repository/VmtRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/repository/VmtRepository.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/usecase/VMT_usecase.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/usecase/VMT_usecase.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/usecase/entity/SalesRecords.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/usecase/entity/SalesRecords.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/usecase/entity/Vendor.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/usecase/entity/Vendor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +65,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -63,21 +74,21 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="//wsl$/Ubuntu/usr/bin/bash" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dbsrl\gowork\src\VendingMachineTracker\domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.Unnamed">
+  <component name="RunManager" selected="Makefile.model">
     <configuration name="go test VendingMachineTracker" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
       <module name="VendingMachineTracker" />
       <working_directory value="$PROJECT_DIR$" />
@@ -87,6 +98,12 @@
       <package value="VendingMachineTracker" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="model" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/MakeFile" target="model" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
       <method v="2" />
     </configuration>
     <configuration name="Unnamed" type="ShConfigurationType" nameIsGenerated="true">
@@ -102,8 +119,14 @@
     </configuration>
     <list>
       <item itemvalue="Go Test.go test VendingMachineTracker" />
+      <item itemvalue="Makefile.model" />
       <item itemvalue="Shell Script.Unnamed" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile.model" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -126,6 +149,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/VendingMachineTrancker" />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
     <state x="433" y="0" key="#GOPATH" timestamp="1597557516685">
@@ -136,26 +162,66 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="433" y="174" key="#Go_Modules/0.0.1280.680@0.0.1280.680" timestamp="1597562944357" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597565390945">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598686814055">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1597565390945" />
-    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1598080286293">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1598686814055" />
+    <state x="389" y="141" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598686850109">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1598080286293" />
-    <state x="460" y="155" key="FileChooserDialogImpl" timestamp="1598072651837">
+    <state x="389" y="141" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1598686850109" />
+    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1598687365736">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="460" y="155" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598072651837" />
+    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1598687365736" />
+    <state x="688" y="133" key="FileChooserDialogImpl" timestamp="1598684468558">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="688" y="133" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598684468558" />
     <state x="461" y="242" key="Github.CreateGistDialog" timestamp="1597565556811">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="461" y="242" key="Github.CreateGistDialog/0.0.1280.680@0.0.1280.680" timestamp="1597565556811" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1598072652640">
+    <state width="845" height="163" key="GridCell.Tab.0.bottom" timestamp="1598684701047">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1598072652640" />
+    <state width="845" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598684701047" />
+    <state width="845" height="163" key="GridCell.Tab.0.center" timestamp="1598684701046">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="845" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598684701046" />
+    <state width="845" height="163" key="GridCell.Tab.0.left" timestamp="1598684701046">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="845" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598684701046" />
+    <state width="845" height="163" key="GridCell.Tab.0.right" timestamp="1598684701047">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="845" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598684701047" />
+    <state width="207" height="477" key="HiddenNamespacesPopup" timestamp="1598678966782">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="207" height="477" key="HiddenNamespacesPopup/0.0.1280.680@0.0.1280.680" timestamp="1598678966782" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1598680726769">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1598680726769" />
+    <state x="540" y="200" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1598684659902">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="540" y="200" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1280.680@0.0.1280.680" timestamp="1598684659902" />
+    <state x="519" y="228" width="320" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1598683151995">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="519" y="228" width="320" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1280.680@0.0.1280.680" timestamp="1598683151995" />
+    <state x="484" y="112" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1598686955605">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="484" y="112" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1598686955605" />
+    <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598677744029">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1598677744029" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1598080118890">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

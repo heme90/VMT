@@ -2,6 +2,7 @@ package repository
 
 import (
 	"VendingMachineTracker/adapter/domain"
+	model "VendingMachineTracker/data"
 	"VendingMachineTracker/domain/usecase/entity"
 	"errors"
 	"github.com/go-pg/pg"
@@ -41,7 +42,7 @@ func (vr *VmtRepository) SaveSalesRecord(record domain.ISalesRecords) error {
 		return errors.New("There's Error In Begin TRANSACTION!")
 	}
 	//TODO implement Model
-	if _,err := tx.Model().Insert(record); err!= nil {
+	if _,err := tx.Model(model.SaleRecord{}).Insert(record); err!= nil {
 		err := tx.Rollback()
 		if err != nil {
 			return errors.New("error in rollback transaction!")
@@ -54,8 +55,9 @@ func (vr *VmtRepository) SaveSalesRecord(record domain.ISalesRecords) error {
 //TODO error 패키지로 정의?
 func (vr *VmtRepository) GetSalesRecords(filter domain.Filter) (domain.SearchResponse,error) {
 	response := entity.NewSearchResponse()
-	q :=vr.conn.Model(interface{}(nil))
+	q :=vr.conn.Model(model.SaleRecord{})
 	//TODO pg.Indent.Model ..... Db 구성, 모델 생성 후 쿼리문 수정
+	//TODO 조인쿼리 orm function 으로 분리
 	if filter.GetCountry() != "" {
 		q = q.Where("? = ?")
 	}

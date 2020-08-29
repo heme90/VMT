@@ -1,0 +1,91 @@
+CC=${GOROOT}/bin/go
+CMD=command
+TARGET=$(CMD)/VendingMachineTracker
+MOD=${GOPATH}/pkg/mod
+PWD=$(shell pwd)
+PKG=VendingMachineTracker
+PROTOCOL=protocols/VMT.proto
+GENNA=${GOPATH}/bin/genna
+#TABLES=person verifications authorizations admin_otp partner_wallets promotions remittance_methods admin_event credit_logs external_person external_transfer_status documents admin virtual_account_histories compliances countries sanction_list wallets open_banking_sentbe_token partner_wallet_log remittance_branches person_deactivated transfers bank_code queue_trace transfer_trace grades agreements receive_methods virtual_accounts address locales banks external_transfers external_person_transfers remittance_plan mobiles welcome_transfer_log guarantee_time agent_trackings agents wallet_logs partner_methods event pin_number auto_debit_histories wallet_promotion_interest virtual_account_lock_histories rails_authorizations open_banking_token master_code faq_category welcome_seq_number queue_trace_backup currencies transfers_cancel_reason transfer_history cs_info inbound_remittance inbound_recipient external_card banner usage_logs transfer_restrictions faq talk_template_code grade_logs ns_person notice octa_compliance penny_test_log inbound_remittance_trace master_code_branch inbound_octa_compliance static_list app_version
+
+all: model proto dep
+#
+#run:
+#	$(CC) run $(CMD)/*.go start develop
+#build:
+#	$(CC) build $(CMD)/*.go -o $(TARGET)
+#
+model:
+	@echo "\n"
+	@echo "################################ Generate postgres table model ##################################"
+	@echo "\n"
+		@$(GENNA) model-named -c postgresql://127.0.0.1:5432/vmt_dev -o $(PWD)/data/model.go \
+		-pmodel -f -g9 -d;
+
+	@echo "\n"
+	@echo "################################ DONE postgres table model     ##################################"
+	@echo "\n"
+
+	find $(PWD)/data/model -type f -name "model.go"  -exec sed -i '' -e 's/ int / int32/' {} \;
+	find $(PWD)/data/model -type f -name "model.go"  -exec sed -i '' -e '' {} \;
+#	for k in " int " "float64"; do \
+#		if [ '$$k' = ' int ' ]; then \
+#		  v=" int32"; \
+#		elif [ '$$k' = 'float64' ]; then \
+#		  v="float32"; \
+#		fi ;\
+		#find $(PWD)/data/model -type f -name "model.go"  -exec sed -i '' -e 's/ int / int32/' {} \;
+	#done
+#	@for table in $(TABLES) ; do \
+#	echo "\n" ; \
+#	echo "################################ Generate $$table model       ##################################" ; \
+#		$(GENNA) model-named -c postgres://sentbe_office:paegh9uG@192.168.1.105:5432/sentbe_v2 -o $(PWD)/data/model/$$table.go \
+#		-pmodel -f -g9 -d \
+#		-t $$table ; \
+#	echo "################################ DONE $$table model           ##################################" ; \
+#	echo "\n" ; \
+#  	done
+proto:
+	@echo "\n"
+	@echo "################################ Generate protobuf            ##################################"
+	@echo "\n"
+	protoc \
+    -I$(PWD) \
+    -I$(MOD)/github.com/googleapis/googleapis@v0.0.0-20200713233427-59f97e6044a1 \
+    -I$(MOD)/github.com/gogo/protobuf@v1.3.1 \
+    -I$(MOD)/github.com/gogo/protobuf@v1.3.1/protobuf \
+    --gogoslick_out=paths=source_relative,plugins=grpc,\
+Mgoogle/protobuf/any.proto=github.com/gogo/protobuf/types,\
+Mgoogle/protobuf/struct.proto=github.com/gogo/protobuf/types,\
+Mgoogle/protobuf/timestamp.proto=github.com/gogo/protobuf/types,\
+Mgoogle/protobuf/empty.proto=github.com/gogo/protobuf/types:. \
+    $(PROTOCOL)
+
+	@echo "\n"
+	@echo "################################ DONE                         ##################################"
+	@echo "\n"
+	@echo "\n"
+
+	@echo "################################ Generate enigma descriptor ##################################"
+	@echo "\n"
+	protoc \
+    -I$(PWD) \
+    -I$(MOD)/github.com/googleapis/googleapis@v0.0.0-20200713233427-59f97e6044a1 \
+    -I$(MOD)/github.com/gogo/protobuf@v1.3.1 \
+    -I$(MOD)/github.com/gogo/protobuf@v1.3.1/protobuf \
+    --include_imports --include_source_info \
+    --descriptor_set_out=protocols/$(PKG)/$(PKG).pb $(PROTOCOL)
+	@echo "\n"
+	@echo "################################ DONE enigma descriptor ######################################"
+	@echo "\n"
+	@echo "\n"
+	@echo "################################ COPY enigma descriptor ######################################"
+	@echo "\n"
+	#cp -f protocols/$(PKG)/$(PKG).pb $(PWD)/$(CMD)/$(PKG).pb
+	@echo "\n"
+	@echo "################################ DONE enigma descriptor ######################################"
+	@echo "\n"
+	@echo "\n"
+
+dep:
+	$(CC) mod tidy

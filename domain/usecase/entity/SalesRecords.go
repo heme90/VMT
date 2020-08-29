@@ -12,6 +12,7 @@ import (
 //5. 지역
 
 type SalesRecord struct {
+	ID int64
 	VendorID  int32
 	GoodsName string
 	Price     float64
@@ -21,6 +22,10 @@ type SalesRecord struct {
 
 func NewSalesRecord(vendorID int32, goodsName string, price float64, currency string, createdAt time.Time) *SalesRecord {
 	return &SalesRecord{VendorID: vendorID, GoodsName: goodsName, Price: price, Currency: currency, CreatedAt: createdAt}
+}
+
+func (s *SalesRecord) GetID() int64 {
+	return s.ID
 }
 
 func (s *SalesRecord) GetVendorID() int32 {

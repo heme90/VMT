@@ -26,6 +26,9 @@ func (v *VmtUseCase) SaveSalesRecord(record dto.ISalesRecords) error {
 }
 
 func (v *VmtUseCase) ViewRecordData(searchFilter dto.Filter) dto.SearchResponse {
+
+
+
 	response,err := v.repo.GetSalesRecords(searchFilter)
 	if err != nil {
 		log.Fatal(err)

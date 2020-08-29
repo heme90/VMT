@@ -27,6 +27,10 @@ type Address struct {
 	Line2   string
 }
 
+func NewAddress(country string, city string, line1 string, line2 string) *Address {
+	return &Address{Country: country, City: city, Line1: line1, Line2: line2}
+}
+
 func (a *Address) GetCountry() string {
 	return a.Country
 }

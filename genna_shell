@@ -1,0 +1,1 @@
+genna model-named -c postgres://vmtUser:07140714@localhost:5432/vmt_dev?sslmode=disable -o ./data/model.go -pmodel -f -g9 -d

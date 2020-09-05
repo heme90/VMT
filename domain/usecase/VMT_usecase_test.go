@@ -2,34 +2,28 @@ package usecase
 
 import (
 	"VendingMachineTracker/adapter/domain"
-	"VendingMachineTracker/domain/repository"
+	repository2 "VendingMachineTracker/domain/repository"
+	"VendingMachineTracker/domain/usecase/entity"
+	"fmt"
 	"testing"
+	"time"
 )
 
+var reposit domain.Repository
 
+func init() {
+
+
+}
+
+
+//TODO json 파일 만들어서 mock 테스트 작성
 func TestVmtUseCase_SaveSalesRecord(t *testing.T) {
-	type fields struct {
-		repo repository.VmtRepository
-	}
-	type args struct {
-		record domain.ISalesRecords
-	}
-	tests := []struct {
-		name    string
-		fields  fields
-		args    args
-		wantErr bool
-	}{
-		// TODO: Add test cases.
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			v := &VmtUseCase{
-				repo: tt.fields.repo,
-			}
-			if err := v.SaveSalesRecord(tt.args.record); (err != nil) != tt.wantErr {
-				t.Errorf("SaveSalesRecord() error = %v, wantErr %v", err, tt.wantErr)
-			}
-		})
+	repo := repository2.VmtRepository{}
+	reposit = repo.InitRepository()
+	rec := entity.NewSalesRecord(1,"pocari",700,"KRW",time.Now())
+	use := NewVmtUseCase(reposit)
+	if err := use.SaveSalesRecord(rec);err != nil {
+		fmt.Errorf("error %v",err)
 	}
 }

@@ -2,9 +2,11 @@ package domain
 
 import "github.com/go-pg/pg"
 
-type repository interface{
-	InitRepository()
+type Repository interface{
+	InitRepository() Repository
 	GetInstance() *pg.DB
 	SaveSalesRecord(records ISalesRecords) error
-	GetSalesRecords(filter Filter) (SearchResponse,error)
+	SearchSalesRecords(filter Filter) (SearchResponse,error)
+	GetFranchiseAuth(apiKey string) int32
 }
+

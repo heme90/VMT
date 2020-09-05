@@ -2,14 +2,16 @@ package usecase
 
 import (
 	dto "VendingMachineTracker/adapter/domain"
-	"VendingMachineTracker/domain/repository"
 	"errors"
 	"log"
 )
 
 type VmtUseCase struct {
-	repo repository.VmtRepository
+	repo dto.Repository
 }
+
+
+
 
 
 func (v *VmtUseCase) InitRepository() {
@@ -26,10 +28,7 @@ func (v *VmtUseCase) SaveSalesRecord(record dto.ISalesRecords) error {
 }
 
 func (v *VmtUseCase) ViewRecordData(searchFilter dto.Filter) dto.SearchResponse {
-
-
-
-	response,err := v.repo.GetSalesRecords(searchFilter)
+	response,err := v.repo.SearchSalesRecords(searchFilter)
 	if err != nil {
 		log.Fatal(err)
 		return nil
@@ -37,6 +36,10 @@ func (v *VmtUseCase) ViewRecordData(searchFilter dto.Filter) dto.SearchResponse 
 	return response
 }
 
-func (v *VmtUseCase) AuthFranchiseAdmin(apikey string) error {
-	panic("implement me")
+func (v *VmtUseCase) AuthFranchiseAdmin(apikey string) (int32,error) {
+	var franchiseID int32
+	if franchiseID = v.repo.GetFranchiseAuth(apikey);franchiseID==0{
+		return 0, errors.New("auth fail")
+	}
+	return franchiseID,nil
 }
